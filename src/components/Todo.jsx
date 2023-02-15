@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import TasksList from "./TasksList";
 
 function Todo() {
   const [tasks, setTasks] = useState([]);
@@ -23,10 +24,8 @@ function Todo() {
           placeholder="go to gym..."
           onChange={onChangeHandle}
         />
-        {tasks.map((e) => {
-          return <h1>{e}</h1>;
-        })}
       </form>
+      <TasksList tasks={tasks}/>
     </>
   );
 }

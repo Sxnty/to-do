@@ -15,7 +15,7 @@ function Todo() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setTasks([...tasks, newTask]);
+          setTasks([...tasks, {title:newTask, finished: false}]);
         }}
       >
         <h1>Todo</h1>

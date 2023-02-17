@@ -1,11 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import TasksList from "./TasksList";
+import CompletedTasks from "./CompletedTasks";
 
 function Todo() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
-
+  const [completedTasks, setCompleted] = useState([]);
   const onChangeHandle = (e) => {
     setNewTask(e.target.value);
   };
@@ -25,7 +26,8 @@ function Todo() {
           onChange={onChangeHandle}
         />
       </form>
-      <TasksList tasks={tasks} setTasks={setTasks} />
+      <TasksList tasks={tasks} setTasks={setTasks} setCompleted={setCompleted} completedTasks={completedTasks} />
+      <CompletedTasks completedTasks={completedTasks} setCompleted={setCompleted}/>
     </>
   );
 }

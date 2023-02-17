@@ -15,7 +15,7 @@ function Todo() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setTasks([...tasks, {title:newTask, finished: false}]);
+          setTasks([...tasks, { title: newTask, status: false }]);
         }}
       >
         <h1>Todo</h1>
@@ -25,7 +25,7 @@ function Todo() {
           onChange={onChangeHandle}
         />
       </form>
-      <TasksList tasks={tasks}/>
+      <TasksList tasks={tasks} setTasks={setTasks} />
     </>
   );
 }

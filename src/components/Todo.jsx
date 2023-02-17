@@ -16,7 +16,11 @@ function Todo() {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setTasks([...tasks, { title: newTask, status: false }]);
+          if (tasks.find((task) => task.title === newTask)) {
+            alert("Ya existe una tarea con este título.");
+          } else {
+            setTasks([...tasks, { title: newTask, status: false }]);
+          }
         }}
       >
         <h1>Todo</h1>
@@ -26,8 +30,16 @@ function Todo() {
           onChange={onChangeHandle}
         />
       </form>
-      <TasksList tasks={tasks} setTasks={setTasks} setCompleted={setCompleted} completedTasks={completedTasks} />
-      <CompletedTasks completedTasks={completedTasks} setCompleted={setCompleted}/>
+      <TasksList
+        tasks={tasks}
+        setTasks={setTasks}
+        setCompleted={setCompleted}
+        completedTasks={completedTasks}
+      />
+      <CompletedTasks
+        completedTasks={completedTasks}
+        setCompleted={setCompleted}
+      />
     </>
   );
 }

@@ -25,7 +25,7 @@ function Todo() {
               }
             }}
           >
-            <h1>Todo</h1>
+            <h2>Add a task</h2>
             <input
               type="text"
               placeholder="go to gym..."

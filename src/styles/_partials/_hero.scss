@@ -1,0 +1,40 @@
+.hero {
+    color: white;
+    height: 100vh;
+    background: url(../assets/bg.svg) fixed center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    align-items: center;
+    .hero__main {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        align-items: center;
+        nav {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                svg {
+                    color: white;
+                }
+            }
+        }
+        .hero__tasklist {
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: fit-content;
+        }
+    }
+}

@@ -2,25 +2,31 @@ import React from "react";
 import { useState } from "react";
 import { RiCheckboxCircleLine } from "react-icons/ri";
 
-function TasksList({ tasks, setTasks, setCompleted, completedTasks}) {
+function TasksList({ tasks, setTasks, setCompleted, completedTasks }) {
   const [status, setStatus] = useState(false);
   const onClickHandle = (title) => {
-    setCompleted([...completedTasks, title])
-    const newTasks = tasks.filter(task => task.status)
-    setTasks(newTasks)
+    setCompleted([...completedTasks, title]);
+    const updatedTasks = tasks.map((task) => {
+      if (task.title === title) {
+        return { ...task, status: !task.status };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
   };
   return (
     <>
-      {tasks.map((e) => {
-        return (
-          <div className="task__card" key={e.title}>
-            <h2>{e.title}</h2>
-            <h3>{e.status ? 'Completed' : 'Uncompleted'}</h3>
-            <RiCheckboxCircleLine onClick={() => onClickHandle(e.title)} />
-
-          </div>
-        );
-      })}
+      {tasks
+        .filter((task) => !task.status)
+        .map((e) => {
+          return (
+            <div className="task__card" key={e.title}>
+              <h2>{e.title}</h2>
+              <h3>{e.status ? "Completed" : "Uncompleted"}</h3>
+              <RiCheckboxCircleLine onClick={() => onClickHandle(e.title)} />
+            </div>
+          );
+        })}
     </>
   );
 }

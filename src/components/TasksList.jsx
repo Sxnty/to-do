@@ -21,8 +21,7 @@ function TasksList({ tasks, setTasks, setCompleted, completedTasks }) {
         .map((e) => {
           return (
             <div className="task__card" key={e.title}>
-              <h2>{e.title}</h2>
-              <h3>{e.status ? "Completed" : "Uncompleted"}</h3>
+              <h3>{e.title}</h3>
               <RiCheckboxCircleLine onClick={() => onClickHandle(e.title)} />
             </div>
           );

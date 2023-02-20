@@ -1,40 +1,81 @@
 .hero {
-    color: white;
-    height: 100vh;
-    background: url(../assets/bg.svg) fixed center;
-    background-size: cover;
+  color: white;
+  height: 100vh;
+  background: url(../assets/bg.svg) fixed center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  .hero__main {
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.128);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     place-content: center;
     align-items: center;
-    .hero__main {
-        padding: 2rem;
+    nav {
+      color: white;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      span {
+        color: #ecb365;
+      }
+      ul {
+        gap: 0.2rem;
         display: flex;
-        flex-direction: column;
-        place-content: center;
         align-items: center;
-        nav {
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 2rem;
-                svg {
+        text-align: center;
+        font-size: 1.5rem;
+        li {
+          transition: color 250ms;
+          :hover {
+            color: #ecb365;
+          }
+        }
+        svg {
+          color: white;
+        }
+      }
+    }
+    .hero__tasklist {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      h2 {
+        color: #ecb365;
+      }
+      .task__card {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            max-width: 80%;
+        }
+      }
+      .tasks__actives {
+        form {
+            input {
+                padding: .8rem;
+                margin: .5rem 0;
+                border-radius: .2rem;
+                border: none;
+                background-color: #04293abe;
+                color: white;
+                &::placeholder {
                     color: white;
                 }
             }
         }
-        .hero__tasklist {
-            padding: 1rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            height: fit-content;
+        p {
+          color: black;
         }
+      }
     }
+  }
 }

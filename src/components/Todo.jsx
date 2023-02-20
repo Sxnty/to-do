@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import TasksList from "./TasksList";
 import CompletedTasks from "./CompletedTasks";
+import { RiEnglishInput } from "react-icons/ri";
 
 function Todo() {
   const [tasks, setTasks] = useState([]);
@@ -28,7 +29,7 @@ function Todo() {
             <h2>Add a task</h2>
             <input
               type="text"
-              placeholder="go to gym..."
+              placeholder='go to gym'
               onChange={onChangeHandle}
             />
           </form>

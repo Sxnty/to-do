@@ -19,6 +19,8 @@
   align-items: center;
 }
 .hero .hero__main {
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.128);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -26,17 +28,27 @@
   align-items: center;
 }
 .hero .hero__main nav {
+  color: white;
+  font-size: 1.5rem;
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   width: 100%;
 }
+.hero .hero__main nav span {
+  color: #ecb365;
+}
 .hero .hero__main nav ul {
+  gap: 0.2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.hero .hero__main nav ul li {
+  transition: color 250ms;
+}
+.hero .hero__main nav ul li :hover {
+  color: #ecb365;
 }
 .hero .hero__main nav ul svg {
   color: white;
@@ -46,6 +58,33 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  height: -moz-fit-content;
-  height: fit-content;
+}
+.hero .hero__main .hero__tasklist h2 {
+  color: #ecb365;
+}
+.hero .hero__main .hero__tasklist .task__card {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .hero__main .hero__tasklist .task__card h3 {
+  max-width: 80%;
+}
+.hero .hero__main .hero__tasklist .tasks__actives form input {
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: rgba(4, 41, 58, 0.7450980392);
+  color: white;
+}
+.hero .hero__main .hero__tasklist .tasks__actives form input::-moz-placeholder {
+  color: white;
+}
+.hero .hero__main .hero__tasklist .tasks__actives form input::placeholder {
+  color: white;
+}
+.hero .hero__main .hero__tasklist .tasks__actives p {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

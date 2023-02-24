@@ -87,4 +87,9 @@
 }
 .hero .hero__main .hero__tasklist .tasks__actives p {
   color: black;
+}
+.hero .hero__main .hero__tasklist .tasks__completed .completed__task {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=main.css.map */

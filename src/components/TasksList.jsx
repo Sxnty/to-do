@@ -22,7 +22,7 @@ function TasksList({ tasks, setTasks, setCompleted, completedTasks }) {
           return (
             <div className="task__card" key={e.title}>
               <h3>{e.title}</h3>
-              <RiCheckboxCircleLine onClick={() => onClickHandle(e.title)} />
+              <RiCheckboxCircleLine tasks={tasks} onClick={() => onClickHandle(e.title)}  />
             </div>
           );
         })}

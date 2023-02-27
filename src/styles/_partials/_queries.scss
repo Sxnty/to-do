@@ -1,0 +1,17 @@
+@media screen and (max-width: 480px) {
+  .hero {
+    .hero__main {
+      width: 90%;
+      nav {
+        text-align: center;
+        .nav__items {
+          place-content: center;
+        }
+      }
+      .hero__tasklist {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

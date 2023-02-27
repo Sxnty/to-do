@@ -92,4 +92,20 @@
   padding: 1rem 0;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  .hero .hero__main {
+    width: 90%;
+  }
+  .hero .hero__main nav {
+    text-align: center;
+  }
+  .hero .hero__main nav .nav__items {
+    place-content: center;
+  }
+  .hero .hero__main .hero__tasklist {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -30,5 +30,4 @@ function CompletedTasks({ completedTasks, setCompleted, tasks }) {
     </section>
   );
 }
-
 export default CompletedTasks;
